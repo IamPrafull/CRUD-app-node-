@@ -105,20 +105,6 @@ Remove users from the database.
 
 ---
 
-## 📸 Screenshots
-
-(Add your project screenshots here)
-
-Example:
-
-```
-screenshots/
-├── home.png
-├── users.png
-└── edit.png
-```
-
----
 
 ## 🎯 Learning Outcomes
 
