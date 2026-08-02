@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900">
+    <div class="max-w-7xl mx-auto p-6">
+        <a href="/" class="inline-block mb-6 text-red-400 hover:text-red-300 hover:underline font-semibold">
+            ← Back to Form
+        </a>
+
+        <div class="flex flex-wrap gap-6">
+            <% users.forEach((e) => { %>
+                <div class="w-72 bg-zinc-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="h-60 bg-zinc-700 flex items-center justify-center overflow-hidden">
+                        <img class="object-cover w-full h-full" src="<%= e.image %>" alt="<%= e.name %>">
+                    </div>
+                    <div class="p-5">
+                        <h1 class="text-2xl font-semibold text-white"><%= e.name %></h1>
+                        <p class="text-zinc-400 mb-3"><%= e.email %></p>
+
+                        <div class="flex justify-between mt-5">
+                            <a href="/edit/<%= e._id %>"
+                                class="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white">
+                                Update
+                            </a>
+
+                            <form action="/delete/<%= e._id %>" method="POST" class="m-0">
+                                <button type="submit"
+                                    class="px-4 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>

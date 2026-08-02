@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-zinc-900 p-5">
+        <a href="/card" class="cursor-pointer text-red-500 mb-3 inline-block">Available Users (click me)</a>
+        <form action="/create" method="POST">
+            <h1 class="text-white text-3xl mb-4">Create User</h1>
+            <input name="name" type="text" placeholder="Name" class="px-3 py-2 bg-zinc-700 outline-none text-white m-3 rounded-md">
+            <input name="email" type="text" placeholder="Email" class="px-3 py-2 bg-zinc-700 outline-none text-white m-3 rounded-md">
+            <input name="image" type="text" placeholder="Image Url" class="px-3 py-2 bg-zinc-700 outline-none text-white m-3 rounded-md">
+            <input type="submit" value="Submit" class="px-3 py-2 bg-green-500 outline-none rounded-md hover:bg-green-600 cursor-pointer m-3">
+        </form>
+    </div>
+</body>
+</html>
